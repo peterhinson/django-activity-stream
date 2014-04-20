@@ -7,9 +7,11 @@ Activity Stream Documentation
    Justin Quick <justquick@gmail.com> and many others listed in AUTHORS.txt
 :Version: 0.4.5
 :Release: 0.4.5beta1
+:Modified: Peter Hinson, 2014
 
 
 ::
+Modified to use preferred method of accessing custom user model.
 
     pip install django-activity-stream==0.4.5beta1
 
