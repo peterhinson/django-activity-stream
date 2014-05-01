@@ -8,11 +8,13 @@ from django.conf import settings
 
 user_model_label = getattr(settings, 'AUTH_USER_MODEL', 'auth.User')
 
-try:
-    from django.contrib.auth import get_user_model
-except ImportError:
-    from django.contrib.auth.models import User
-    get_user_model = lambda: User
+# try:
+#     from django.contrib.auth import get_user_model
+# except ImportError:
+#     from django.contrib.auth.models import User
+
+# Work around for circular imports
+get_user_model = lambda: user_model_label
 
 try:
     from django.utils.encoding import smart_text
